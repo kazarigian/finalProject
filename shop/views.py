@@ -5,21 +5,35 @@ from django.shortcuts import render, redirect
 
 
 def home(request):
-    # item_list = Item.objects.all()
     return render(request, 'home.html')
 
 
-def ax(request):
-    # item_list = Item.objects.all()
-    return render(request, 'ax.html')
+def gloves(request):
+    return render(request, 'ax/gloves.html')
 
 
-def clothes(request):
-    return render(request, 'clothes.html')
+def hats(request):
+    return render(request, 'ax/hats.html')
+
+
+def scarves(request):
+    return render(request, 'ax/scarves.html')
 
 
 def boots(request):
-    return render(request, 'boots.html')
+    return render(request, 'clothes/boots.html')
+
+
+def jackets(request):
+    return render(request, 'clothes/jackets.html')
+
+
+def pants(request):
+    return render(request, 'clothes/pants.html')
+
+
+def shirts(request):
+    return render(request, 'clothes/shirts.html')
 
 
 def cart(request):
