@@ -1,28 +1,122 @@
 {% extends 'base.html' %}
+
+{% block title %}
+    Ugly sweaters
+{% endblock %}
+
+{% load static %}
+
 {% block body %}
     <h1>shirts</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <h1>adding stuff to scroll hopefully</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur ducimus eaque eius enim illum itaque, possimus quas reiciendis reprehenderit sunt, suscipit tempore voluptatum! Ab excepturi inventore maiores vel velit.</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
 
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/bobross-uglys-w.jpg' %}" class="card-img-top" alt="bobross shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> bobross sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/cat-uglys-p.jpg' %}" class="card-img-top" alt="cat shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> cat sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/santa-uglys-g.jpg' %}" class="card-img-top" alt="santa shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> santa sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/clippy-uglys-b.jpg' %}" class="card-img-top" alt="clippy shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> clippy sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/dachshund-uglys-g.jpg' %}" class="card-img-top" alt="dachshund shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> dachshund sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/harambe-uglys-p.jpg' %}" class="card-img-top" alt="harambe shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> harambe sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/tree-uglys-g.jpg' %}" class="card-img-top" alt="tree shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> tree sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/kiss-uglys-gr.jpg' %}" class="card-img-top" alt="kiss shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> kiss sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/letitsnow-uglys-b.jpg' %}" class="card-img-top" alt="letitsnow shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> letitsnow sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/ugly-uglys-gr.jpg' %}" class="card-img-top" alt="ugly shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> This is my ugly sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/nightmare-uglys-bl.jpg' %}" class="card-img-top" alt="nightmare shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> nightmare sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/shirts/santa-uglys-bl.jpg' %}" class="card-img-top" alt="santa shirt"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> santa sweater</h5></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 {% endblock %}

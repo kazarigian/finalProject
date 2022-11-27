@@ -10,7 +10,7 @@ colors = (
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=50)
+    type = models.CharField(max_length=50)
     color = models.CharField(max_length=10, choices=colors)
 
 

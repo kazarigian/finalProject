@@ -24,12 +24,8 @@ def boots(request):
     return render(request, 'clothes/boots.html')
 
 
-def jackets(request):
-    return render(request, 'clothes/jackets.html')
-
-
-def pants(request):
-    return render(request, 'clothes/pants.html')
+def coats(request):
+    return render(request, 'clothes/coats.html')
 
 
 def shirts(request):
