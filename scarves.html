@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Scarves
+{% endblock %}
+
+{% load static %}
+
+{% block body %}
+    <h1>scarves</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for item in items %}
+            <div class="col-4 col-md-3">
+                <div class="card h-100">
+                     <a href="{% url 'item' %}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}"></a>
+                    <div class="card-body">
+                        <a href="{% url 'item' %}"><h5 class="card-title"> {{ item.name }} </h5></a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+    {% comment %}<div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/tassle-scarf-g.jpg' %}" class="card-img-top" alt="tassle scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">tassle scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/plaid-scarf-g.jpg' %}" class="card-img-top" alt="Plaid carf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">plaid scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/tassle-scarf-b.jpg' %}" class="card-img-top" alt="tassle scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">tassle carf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/knit-scarf-b.jpg' %}" class="card-img-top" alt="kit scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">knit scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/tassle-scarf-w.jpg' %}" class="card-img-top" alt="Tassle scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Tassle scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/infinity-scarf-w.jpg' %}" class="card-img-top" alt="Infinity scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Infinity scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/chunky-scarf-p.jpg' %}" class="card-img-top" alt="chunky scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Chunky scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/handwoven-scarf-p.jpg' %}" class="card-img-top" alt="Handwoven scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Handwoven scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/infinity-scarf-p.jpg' %}" class="card-img-top" alt="Infinity scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">infinity scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/reversable-scarf-gr.jpg' %}" class="card-img-top" alt="Reversable scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">reversable scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/long-scarf-gr.jpg' %}" class="card-img-top" alt="Long scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Long Scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/infinity-scarf-gr.jpg' %}" class="card-img-top" alt="Infinty scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Infinity scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/striped-scarf-bl.jpg' %}" class="card-img-top" alt="Striped scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Striped scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/soft-scarf-bl.jpg' %}" class="card-img-top" alt="Soft scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Soft Scarf</h5></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/scarves/knit-scarf-bl.jpg' %}" class="card-img-top" alt="Knit scarf"></a>
+                <div class="card-body">
+                    <a href=""><h5 class="card-title">Knit scarf</h5></a>
+                </div>
+            </div>
+        </div>
+    </div>{% endcomment %}
+{% endblock %}

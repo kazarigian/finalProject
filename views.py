@@ -1,41 +1,60 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout
-from django.contrib.auth. decorators import login_required
+from .models import Item, Checkout
 
 # Create your views here.
 
-
-@login_required(login_url='/accounts/login')
-def index(request):
-    return render(request, 'accounts/index.html')
+# context = {'items': Item.objects.all()}
 
 
-def register_view(request):
-    form = UserCreationForm(request.POST or None)
-    # check whether post or not, if post they clicked the register button
-    if request.method == 'POST':
-        if form.is_valid():  # checks whether fields are filled and meet qualifications (ex passoword qualifications)
-            form.save()
-            return redirect('index')
-    else:
-        context = {'form': form}
-        return render(request, 'accounts/register.html', context)
+def home(request):
+    return render(request, 'home.html')
 
 
-def login_view(request):
-    form = AuthenticationForm(data=request.POST or None)
-    if request.method == 'POST':
-        if form.is_valid():
-            # get user info from form
-            user = form.get_user()
-            login(request, user)
-            return redirect('index')
-    else:
-        context = {'form': form}
-        return render(request, 'accounts/login.html', context)
+def gloves(request):
+    item_list = Item.objects.filter(type__icontains='gloves')
+    context = {'items': item_list}
+    return render(request, 'ax/gloves.html', context)
 
 
-def logout_view(request):
-    logout(request)
-    return redirect('index')
+def hats(request):
+    item_list = Item.objects.filter(type__icontains='hats')
+    context = {'items': item_list}
+    return render(request, 'ax/hats.html', context)
+
+
+def scarves(request):
+    item_list = Item.objects.filter(type__icontains='scarves')
+    context = {'items': item_list}
+    return render(request, 'ax/scarves.html', context)
+
+
+def boots(request):
+    item_list = Item.objects.filter(type__icontains='boot')
+    context = {'items': item_list}
+    return render(request, 'clothes/boots.html', context)
+
+
+def coats(request):
+    item_list = Item.objects.filter(type__icontains='coat')
+
+    context = {'items': item_list}
+    return render(request, 'clothes/coats.html', context)
+
+
+def shirts(request):
+    item_list = Item.objects.filter(type__icontains='shirt')
+    context = {'items': item_list}
+    return render(request, 'clothes/shirts.html', context)
+
+
+def cart(request):
+    return render(request, 'cart.html')
+
+
+def checkout(request):
+    return render(request, 'checkout.html')
+
+
+def item(request):
+    return render(request, 'item.html')
+

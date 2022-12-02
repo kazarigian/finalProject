@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% block title %}
+    coats
+{% endblock %}
+
+{% load static %}
+
+{% block body %}
+    <h1>jackets</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for item in items %}
+            <div class="col-4 col-md-3">
+                <div class="card h-100">
+                     <a href="{% url 'item' %}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}"></a>
+                    <div class="card-body">
+                        <a href="{% url 'item' %}"><h5 class="card-title"> {{ item.name }} </h5></a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+{% comment %}
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/long-coat-w.jpg' %}" class="card-img-top" alt="long coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> long coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/thick-coat-w.jpg' %}" class="card-img-top" alt="thick coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> thick coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/furdenim-coat-b.jpg' %}" class="card-img-top" alt="furdenim coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> furlined denim coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/furhood-coat-b.jpg' %}" class="card-img-top" alt="furhood coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> furlined hood coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/medium-coat-b.jpg' %}" class="card-img-top" alt="medium coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> medium coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/furhood-coat-g.jpg' %}" class="card-img-top" alt="furhood coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> furhood coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/furlined-coat-g.jpg' %}" class="card-img-top" alt="furlined coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> furlined coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/goosedown-coat-g.jpg' %}" class="card-img-top" alt="goosedown coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> goose down coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/fuzzy-coat-p.jpg' %}" class="card-img-top" alt="fuzzy coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> fuzzy coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/puffy-coat-p.jpg' %}" class="card-img-top" alt="puffy coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> puffy coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/windbreaker-coat-p.jpg' %}" class="card-img-top" alt="windbreaker coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> windbreaker coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/insulated-coat-bl.jpg' %}" class="card-img-top" alt="insulated coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> insulated coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/long-coat-bl.jpg' %}" class="card-img-top" alt="long coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> long coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/puffy-coat-bl.jpg' %}" class="card-img-top" alt="puffy coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> puffy coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/reversable-coat-gr.jpg' %}" class="card-img-top" alt="reversable coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> reversable coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4 col-md-3">
+            <div class="card h-100">
+                <a href="#"><img src="{% static 'images/coats/thin-coat-gr.jpg' %}" class="card-img-top" alt="thin coat"></a>
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title"> thin coat</h5></a>
+                </div>
+            </div>
+        </div>
+
+    </div>{% endcomment %}
+{% endblock %}
