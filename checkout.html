@@ -8,4 +8,36 @@
 
 {% block body %}
     <h1>checkout</h1>
+    <form action="{% url 'checkout' %}" method="post">
+        {% csrf_token %}
+        <div class="">
+            <div class="p-2">
+                <lable for="firstn">Name:</lable>
+                <input type="text" name="firstn">
+                <input type="text" name="lastn">
+            </div>
+
+            <div class="p-2">
+                <lable for="email">Email:</lable>
+                <input type="email" name="email">
+            </div>
+
+            <div class="p-2">
+                <lable for="addy">Address:</lable>
+                <input type="text" name="addy">
+            </div>
+
+            <div class="p-2">
+                <lable for="type">Select payment type</lable>
+                <select name="type" id="type">
+                    <option value="card">card</option>
+                    <option value="cash">cash</option>
+                    <option value="giftcard">giftcard</option>
+                    <option value="iou">"iou"</option>
+                </select>
+            </div>
+            <input type="submit" value="checkout">
+
+        </div>
+    </form>
 {% endblock %}

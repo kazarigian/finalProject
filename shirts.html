@@ -13,9 +13,9 @@
             {# in a card show the pic and name #}
             <div class="col-4 col-md-3">
                 <div class="card h-100">
-                     <a href="{% url 'item' %}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}"></a>
+                     <a href="{% url 'item' item.id %}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}"></a>
                     <div class="card-body">
-                        <a href="{% url 'item' %}"><h5 class="card-title"> {{ item.name }} </h5></a>
+                        <a href="{% url 'item' item.id %}"><h5 class="card-title"> {{ item.name }} </h5></a>
                     </div>
                 </div>
             </div>

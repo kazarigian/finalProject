@@ -2,16 +2,13 @@
 {% load static %}
 {% block body %}
 
-
-
-
-    <div class="row">
-    <div class="col"><img src="{{ item.image.url }}"> </div>
+ <div class="row">
+    <div class="col"><img src="{{ itemi.url }}"></div>
     <div class="col">
 
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.description }}</p>
-        <p>{{ item.price }} </p>
+        <h3>{{ itemi.name }}</h3>
+        <p>{{ itemi.description }}</p>
+        <p>{{ itemi.price }} </p>
 
        <input id="user_quantity" type="number" value="quantity">
         <input type="submit" value="Add to cart">
