@@ -5,8 +5,38 @@
 {% endblock %}
 
 {% load static %}
-
+c
 {% block body %}
     <h1>cart</h1>
+ {% for item in items %}
 
+      <div class="row m-5 p-2">
+      <div class="col-5">
+          <img src="{{ item.image.url }}" alt="{{ item.name }}" height="100px">
+      </div>
+      <div class="col-6">
+          <h3> {{ item }} </h3>
+
+        <form action="{% url 'cart' %}"  method="post">
+            {% csrf_token %}
+            <input type="hidden" value="{{ item.id }}", name="item_id">
+            <input class="btn btn-outline-warning" type="submit" value="Delete">
+        </form>
+      </div>
+      </div>
+        <hr>
+   {% endfor %}
+    {% comment %}<div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for items in my_cart %}
+            <div class="col-4 col-md-3">
+                <div class="card h-100">
+                     <img src="#" class="card-img-top" alt="{{ items.items.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ items.items }} </h5>
+                    </div>
+                </div>
+            </div>
+            <p>1</p>
+        {% endfor %}
+    </div>{% endcomment %}
 {% endblock %}

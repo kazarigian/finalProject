@@ -55,11 +55,18 @@
                 </li>
             </ul>
         </div>
-        <a class="btn btn-outline-success" href="{% url 'checkout' %}" role="button"><i class="fa-solid fa-money-check-dollar"></i> Checkout</a>
 
+        <a class="btn btn-outline-success" href="{% url 'checkout' %}" role="button"><i class="fa-solid fa-money-check-dollar"></i> Checkout</a>
         <a class="btn btn-outline-primary ms-2" href="{% url 'logout' %}" role="button"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+        </div>
+        {% else %}
+<div class="pagination justify-content-end">
+           <a class="btn btn-outline-warning" href="{% url 'login' %}" role="button"> Login </a>
+            <a class="btn btn-outline-danger ms-2" href="{% url 'register' %}" role="button"> Register </a>
+</div>
         {% endif %}
-    </div>
+
+
 </nav>
 <!--navbarend-->
 
@@ -72,5 +79,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
+{% block js %}
+{% endblock %}
 </body>
 </html>

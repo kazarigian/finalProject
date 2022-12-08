@@ -16,7 +16,6 @@
                      <a href="{% url 'item' item.id %}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}"></a>
                     <div class="card-body">
                         <a href="{% url 'item' item.id %}"><h5 class="card-title"> {{ item.name }} </h5></a>
-                        <p style="display: none " id="itid">{{ item.id }}</p>
                     </div>
                 </div>
             </div>

@@ -3,18 +3,24 @@
 {% block body %}
 
  <div class="row">
-    <div class="col"><img src="{{ itemi.url }}"></div>
+    <div class="col"><img src="{{ itemi.image.url }}" alt="{{ itemi.name }}" width="50%"></div>
     <div class="col">
 
         <h3>{{ itemi.name }}</h3>
         <p>{{ itemi.description }}</p>
         <p>{{ itemi.price }} </p>
 
-       <input id="user_quantity" type="number" value="quantity">
-        <input type="submit" value="Add to cart">
+        <form action="{% url 'item' itemi.id %}"  method="post">
+            {% csrf_token %}
+            <input type="number" name="quantity">
+            <input type="submit" value="Add to cart">
+        </form>
 
     </div>
     </div>
-
-
 {% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/button.js' %}"> </script>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+body{
+    background-color: lightskyblue;
+    padding: 10px;
+}
+h1{
+    color: mediumpurple;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    background-color: darkslateblue;
+    color: white;
+    border: 5px solid rebeccapurple;
+}
