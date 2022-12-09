@@ -1,10 +1,45 @@
 {% extends 'accounts/base.html' %}
 
-{% block body %}
-    <h3> login </h3>
-    <form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="login">
+{%  block body %}
+    <h1> Login </h1>
+    <form action = "{%  url 'login' %}" method = "post">
+
+    {%  csrf_token %}
+<div class ="container py-5 h-100">
+    <div class = "row d-flex justify-content-center align-items-center h-100">
+        <div class = "col">
+            <div class = "card">
+                <div class = "row">
+                    <div class ="col-md-6-lg-7 d-flex align-items-center">
+                        <div class = "card-body p-5 p-lg-5 text-black">
+                            <form>
+                                <div class = "align-items-center">
+                                    <span class = "h1 fw-bold mb-0"> WinterCarey </span>
+
+                                </div>
+                                <h5 class = "fw-normal mb-3 pb-3" style = "letter-spacing: 1px;">Sign in</h5>
+                                <div class = "form-outline mb-4">
+                                    <input type = "Email" id = "User/Email" class="form-control form-control-lg"/>
+                                    <label class = "form-label" for = "User/Email"> Username/Email </label>
+                                </div>
+                                <div class ="pt-1 mb-4">
+                                    <input type = "Password" id = "password" class = "form-control form-control-lg"/>
+                                    <label class = "form-label" for = "password"> Password </label>
+                                </div>
+                            </form>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
     </form>
+    <input type = "submit" value = Login>
+
 {% endblock %}
