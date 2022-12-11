@@ -38,3 +38,15 @@ def cart(request):
 
 def checkout(request):
     return render(request, 'checkout.html')
+
+def weather(request):
+    ## if request.method == 'POST':
+    ##  check = request.POST.get('Check')
+    ## location = request.POST.get('location')
+
+    url = 'http://api.weatherapi.com/v1/current.json?key=2a5e5b2bcf3d4eda880192423221012&q=Hartford&aqi=yes'
+    response = requests.get(url)
+    data = response.json()
+    print(data)
+    context = {"data": data}
+    return render(request, 'weather.html', context)
