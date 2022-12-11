@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+<body>
+{% block body %}
+    <div class="container-fluid py-4">
+        <div class="p-5 mb-4 bg-info rounded-3 text-bg-light ">
+            <div class="container-fluid py-5">
+                <h1 class="display-4 fw-bold"> Weather </h1>
+                <p class="col-md-6 fs-3">
+                    {{ data.current.temp_f }}
+                    {% if data.current.temp_f < 40 %}
+                        <p> Wear a Coat!</p>
+                        <p>
+                            <button class="btn btn-dark btn-lg" type="button">
+                                <a href="{% url 'coats' %}"> Get Coats </a></button>
+                        </p>
+                        <p>
+                            <button class="btn btn-dark btn-lg" type="button">
+                                <a href="{% url 'gloves' %}"> Get Gloves </a></button>
+                        </p>
+                        <p>
+                            <button class="btn btn-dark btn-lg" type="button">
+                                <a href="{% url 'scarves' %}"> Get Scarves </a></button>
+                        </p>
+                        <p>
+                            <button class="btn btn-dark btn-lg" type="button">
+                                <a href="{% url 'boots' %}"> Get Boots </a></button>
+                        </p>
+                    {% else %}
+                        Do you want a Shirt and Shorts!
+                        <a href="{% url 'shirts' %}"> Get Shirts </a>
+
+
+
+                    {% endif %}
+
+                <div class="col-4">
+                    <button class="btn btn-dark btn-lg" type="button"> Click to Refresh</button>
+                    <div id="info">
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <footer class="pt-3 mt-4 text-muted border-top"> 2022 WinterCarey Website</footer>
+        </div>
+    </div>
+
+{% endblock %}
+{% comment %} <div class="row">
+            <div class="col-4">
+
+
+                    {{ data.current.temp_f }}
+                    {% if data.current.temp_f < 40 %}
+                        <p> Wear a Coat!</p>
+                        <a href="{% url 'coats' %}"> Get Coats </a>
+                    {% else %}
+                        Do you want a Shirt and Shorts!
+                        <a href="{% url 'shirts' %}"> Get Shirts </a>
+
+
+                    {% endif %}
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    </body>
+{% endblock %}{% endcomment %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+<script>
+    const myurl =
+    {% url 'coats' %}
+
+</script>
+<script src="../static/js/js.js"></script>
